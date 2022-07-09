@@ -2,4 +2,4 @@ blank_issues_enabled: true
 contact_links:
   - name: Issue
     about: Issue template
-    url: https://github.com/tanabee/issue-automation-sample/issues/new?template=issue.md&projects=tanabee/issue-automation-sample/1&labels=enhancement
+    url: https://github.com/gas-helloworld/issue-automation-sample/issues/new?template=issue.md&projects=gas-helloworld/issue-automation-sample/1&labels=enhancement

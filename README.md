@@ -1,2 +1,2 @@
-# gas-helloworld
-gasの勉強とgitの勉強
+# teamBのチャットアプリ作成用リポジトリ
+チャットアプリ作るよ

@@ -19,7 +19,7 @@
         </div>
     </header>
 
-    <section>
+    <section class="content">
         <div class="say right">
             <div class="chatting">
                 <div class="sc">

@@ -192,4 +192,9 @@ section input[type=submit] {
 .contents_container ul a {
   text-decoration: none;
   color: #000;
+}
+
+.content {
+  height: 520px;
+  overflow: hidden;
 }/*# sourceMappingURL=room.css.map */

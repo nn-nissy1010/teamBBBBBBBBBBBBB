@@ -1,4 +1,6 @@
-<?php $title = "会員登録";?>
+<?php $title = "会員登録";
+    $cssLink = "../sass/createAccount.css";
+?>
 <?php include("../components/header.php"); ?>
         <form class="form-wrapper">
             <div class="form-sample">

@@ -10,19 +10,27 @@ CREATE TABLE users (
     `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
     `email` VARCHAR(255) UNIQUE NOT NULL,
-    `tel` INT UNIQUE NOT NULL,
+    `tel` VARCHAR(255) UNIQUE NOT NULL,
     `password` VARCHAR(255) NOT NULL,
     `img` VARCHAR(255) NOT NULL
 );
 
 INSERT INTO
-    users
-SET
-    `name` = '多田一稀',
-    `email` = 'kazkaz.t@icloud.com',
-    `tel` = 09037119259,
-    `password` = sha1('password'),
-    `img` = '浜辺美波.jpeg';
+    `users` (
+        `name`,
+        `email`,
+        `tel`,
+        `password`,
+        `img`
+    )
+VALUES
+    (
+        '多田一稀',
+        'kazkaz.t@icloud.com',
+        '09037119259',
+        sha1('password'),
+        '浜辺美波.jpeg'
+    );
 
 DROP TABLE IF EXISTS rooms;
 
@@ -34,7 +42,7 @@ CREATE TABLE rooms (
 );
 
 INSERT INTO
-    rooms
+    `rooms`
 SET
     `name` = '横もく',
     `img` = '横もくB.jpeg',
@@ -49,7 +57,7 @@ CREATE TABLE users_rooms (
 );
 
 INSERT INTO
-    users_rooms
+    `users_rooms`
 SET
     `user_id` = 1,
     `room_id` = 1;
@@ -61,15 +69,14 @@ CREATE TABLE chats (
     `content` VARCHAR(255) NOT NULL,
     `user_id` INT NOT NULL,
     `room_id` INT NOT NULL,
-    `created_at`  DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    `changed_at`  DATETIME,
+    `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `changed_at` DATETIME,
     `deleted_at` DATETIME
 );
 
 INSERT INTO
-    chats
+    `chats`
 SET
     `content` = 'ヤッホー',
     `user_id` = 1,
     `room_id` = 1;
-

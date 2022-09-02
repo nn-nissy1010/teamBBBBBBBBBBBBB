@@ -3,8 +3,6 @@ body {
     width: auto;
 }
 
-$main-color: #1e93ff;
-
 .room-box {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +31,7 @@ section {
         width: 80%;
         height: 35px;
         border-radius: 5px;
-        background-color: silver;
+        background-color: #eaedf2;
         color: black;
         padding: 5px;
         &::placeholder {

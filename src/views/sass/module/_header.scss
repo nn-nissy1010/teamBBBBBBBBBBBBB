@@ -1,3 +1,12 @@
-.test {
-    width: auto;
+.body-wrapper{
+    width: 100%;
+    height: auto;
+    padding: 30px;
+    overflow: hidden;
+}
+
+.label-title{
+ text-align: center;
+ font-size: 24px;
+ font-family: 'Courier New', Courier, monospace;
 }

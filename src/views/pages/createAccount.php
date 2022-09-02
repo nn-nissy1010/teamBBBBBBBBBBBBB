@@ -13,7 +13,7 @@
             <div class="form-sample">
                 <p class="form-label">画像</p>
                 <label class="form-input-file" tabindex="0">
-                    <input type="file" id="file" name="sample" accept="image/jpeg, image/png, image/gif" multiple>画像を選ぶ→
+                    <input type="file" id="accountFile" name="sample" accept="image/jpeg, image/png, image/gif" multiple>画像を選ぶ→
                 </label>
                 <p id="fileName">選択されていません</p>
             </div>

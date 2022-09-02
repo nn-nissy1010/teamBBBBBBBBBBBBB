@@ -1,9 +1,8 @@
+@import '../sass/config/variables';
+
 body {
-    padding: 0 10%;
     width: auto;
 }
-
-$main-color: #1e93ff;
 
 .room-box {
     display: flex;
@@ -13,8 +12,8 @@ $main-color: #1e93ff;
     margin: 5% 0;
 
     div {
-        width: 85px;
-        height: 85px;
+        width: 65px;
+        height: 65px;
         border: solid 1px $main-color;
         border-radius: 5px;
     }
@@ -33,7 +32,7 @@ section {
         width: 80%;
         height: 35px;
         border-radius: 5px;
-        background-color: silver;
+        background-color: #eaedf2;
         color: black;
         padding: 5px;
         &::placeholder {

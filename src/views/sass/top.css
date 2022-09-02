@@ -1,5 +1,4 @@
 body {
-  padding: 0 10%;
   width: auto;
 }
 
@@ -11,8 +10,8 @@ body {
   margin: 5% 0;
 }
 .room-box div {
-  width: 85px;
-  height: 85px;
+  width: 90px;
+  height: 90px;
   border: solid 1px #1e93ff;
   border-radius: 5px;
 }
@@ -29,7 +28,7 @@ section input[type=text] {
   width: 80%;
   height: 35px;
   border-radius: 5px;
-  background-color: silver;
+  background-color: #eaedf2;
   color: black;
   padding: 5px;
 }

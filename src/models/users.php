@@ -42,11 +42,20 @@ function userDelete($db, $condition)
     $stmt->execute();
 }
 
-
-// 読み込み
-function userRead($db, $condition)
+// 全読み込み
+function userRead($db)
 {
-    $stmt = $db->prepare("select * from users WHERE '$condition'");
+    $stmt = $db->prepare("select * from users");
+    $stmt->execute();
+    $output = $stmt->fetchAll();
+    return $output;
+}
+
+// 検索
+function userSearch($db, $condition)
+{
+    $stmt = $db->prepare("SELECT * from `users` WHERE name=?");
+    $stmt->bindValue(1, $condition, PDO::PARAM_STR);
     $stmt->execute();
     $output = $stmt->fetchAll();
     return $output;

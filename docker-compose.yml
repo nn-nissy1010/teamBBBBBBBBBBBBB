@@ -20,8 +20,12 @@ services:
   db:
     platform: linux/amd64
     image: mysql:latest
+    ports:
+      - "3690:3306"
     environment:
       MYSQL_DATABASE: posse
+      MYSQL_USER: posse
+      MYSQL_PASSWORD: password
       MYSQL_ROOT_PASSWORD: password
     volumes:
       - ./mysql/sql:/docker-entrypoint-initdb.d

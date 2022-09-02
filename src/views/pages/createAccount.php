@@ -1,21 +1,5 @@
-<!DOCTYPE html>
-<html lang="ja">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アカウント作成画面</title>
-    <link rel="stylesheet" href="../sass/style.css">
-    <link rel="stylesheet" href="../sass/createAccount.css">
-</head>
-
-<body>
-    <div class="body-wrapper">
-
-        <h1 class="label-title">会員登録</h1>
-
-
+<?php $title = "会員登録";?>
+<?php include("../components/header.php"); ?>
         <form class="form-wrapper">
             <div class="form-sample">
                 <p class="form-label">氏名</p>
@@ -46,8 +30,4 @@
             </div>
             <input type="submit" class="form-Btn" value="会員登録">
         </form>
-        <script src="../js/script.js"></script>
-    </div>
-</body>
-
-</html>
+        <?php include("../components/footer.php"); ?>

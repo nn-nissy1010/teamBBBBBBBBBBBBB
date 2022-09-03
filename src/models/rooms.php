@@ -37,7 +37,7 @@ function roomRead($db)
 // 検索
 function roomSearch($db, $condition)
 {
-    $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
+    $stmt = $db->prepare("SELECT * from `rooms` WHERE $condition");
     $stmt->execute();
     $searchedRoom = $stmt->fetchAll();
     return $searchedRoom;

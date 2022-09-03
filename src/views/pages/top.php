@@ -4,15 +4,14 @@ $cssLink = "../sass/top.css";
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
 
-if($_POST){
+if(isset($_POST['name']) && strlen($_POST['name']) != 0){
     $name = $_POST["name"];
-    $condition = "name = $name";
-    var_dump($condition);
+    $condition = "name = '$name'";
     roomSearch($db, $condition);
-    var_dump(roomSearch($db, $condition));
+    $rooms= roomSearch($db, $condition);
+}else{
+    $rooms = roomRead($db);
 }
-
-$rooms = roomRead($db);
 ?>
 <?php include("../components/header.php"); ?>
 <section>

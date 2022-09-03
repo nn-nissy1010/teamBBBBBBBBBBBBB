@@ -63,7 +63,7 @@
 .preview-image {
   width: 90%;
   height: 150px;
-  display: block;
+  display: none;
 }
 .preview-image img {
   width: 100%;

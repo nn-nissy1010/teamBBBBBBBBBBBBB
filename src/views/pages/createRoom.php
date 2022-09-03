@@ -24,16 +24,16 @@ if ($_POST) {
 
 ?>
 <?php include("../components/header.php"); ?>
-<form class="form-wrapper" action="createRoom.php" method="post" enctype="multipart/form-data">
+<form class="form-wrapper validation-form" action="createRoom.php" method="post" enctype="multipart/form-data" novalidate>
     <div class="form-sample">
         <p class="form-label">部屋の名前</p>
-        <input type="text" class="form-input" placeholder="例）〇〇町お茶会部屋" name="name">
+        <input type="text" class="form-input required" placeholder="例）〇〇町お茶会部屋" name="name">
     </div>
     <div class="form-sample">
         <p class="form-label">人数制限</p>
         <div class="radio-label">
             <label>
-                <input type="radio" name="limit" value="2">
+                <input type="radio" name="limit" value="2" >
                 2人
             </label>
             <label>
@@ -41,7 +41,7 @@ if ($_POST) {
                 5人
             </label>
             <label>
-                <input type="radio" name="limit" value="8">
+                <input type="radio" name="limit" value="8"class="required">
                 8人
             </label>
 

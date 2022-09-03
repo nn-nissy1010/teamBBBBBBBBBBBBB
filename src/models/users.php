@@ -81,19 +81,9 @@ function userRead($db)
 // 検索
 function userSearch($db, $condition)
 {
-    $stmt = $db->prepare("SELECT * from `users` WHERE name=?");
-    $stmt->bindValue(1, $condition, PDO::PARAM_STR);
-    $stmt->execute();
-    $output = $stmt->fetchAll();
-    return $output;
-}
-
-//検索（ログイン用）
-function loginSearch($db, $condition)
-{
     $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
     $stmt->execute();
-    $output = $stmt->rowCount();
+    $output = $stmt->fetchAll();
     return $output;
 }
 

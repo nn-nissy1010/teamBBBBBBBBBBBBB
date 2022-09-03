@@ -4,6 +4,8 @@ $cssLink = "../sass/top.css";
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
 
+session_start();
+
 if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
     $name = $_POST["name"];
     $condition = "name = '$name'";

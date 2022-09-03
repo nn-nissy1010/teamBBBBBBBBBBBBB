@@ -13,6 +13,9 @@
 <body>
     <div class="body-wrapper">
         <header>
-            <p style="text-align: center; font-size:36px; font-family:fantasy; margin-bottom:30px; color:#1E93FF">IDO<br>BTA</p>
+            <div class="header-content">
+                <p class="header-sentence">IDO<br>BTA</p>
+                <div class="my-profile"><a href=""><img src="" alt=""></a></div>
+            </div>
             <h1 class="label-title"><?= $title ?></h1>
         </header>

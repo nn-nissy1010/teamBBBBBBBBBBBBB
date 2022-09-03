@@ -72,4 +72,14 @@
   -o-object-fit: cover;
      object-fit: cover;
 }
+
+.error {
+  width: 100%;
+  padding: 0;
+  display: inline-block;
+  font-size: 90%;
+  color: red;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
 /*# sourceMappingURL=createRoom.css.map */

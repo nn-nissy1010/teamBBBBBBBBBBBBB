@@ -1,6 +1,7 @@
 <?php
 $title = "部屋作成";
 $cssLink = "../sass/createRoom.css";
+$jsLink = "../js/createRoom/script.js";
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
 
@@ -41,7 +42,7 @@ if($_POST){
         <label class="form-input-file" tabindex="0">
             <input type="file" id="roomFile" name="img" accept="image/jpeg, image/png, image/gif" multiple>画像を選ぶ→
         </label>
-        <p id="fileName">選択されていません</p>
+        <p id="roomFileName">選択されていません</p>
     </div>
     <input type="submit" class="form-Btn" value="部屋作成">
 </form>

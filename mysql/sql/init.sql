@@ -12,7 +12,8 @@ CREATE TABLE users (
     `email` VARCHAR(255) UNIQUE NOT NULL,
     `tel` VARCHAR(255) UNIQUE NOT NULL,
     `password` VARCHAR(255) NOT NULL,
-    `img` VARCHAR(255) NOT NULL
+    `img` VARCHAR(255) NOT NULL,
+    `img_path` VARCHAR(255) NOT NULL
 );
 
 INSERT INTO
@@ -21,7 +22,8 @@ INSERT INTO
         `email`,
         `tel`,
         `password`,
-        `img`
+        `img`,
+        `img_path`
     )
 VALUES
     (
@@ -29,7 +31,8 @@ VALUES
         'kazkaz.t@icloud.com',
         '09037119259',
         sha1('password'),
-        '浜辺美波.jpeg'
+        '浜辺美波.jpeg',
+        'img/test'
     );
 
 DROP TABLE IF EXISTS rooms;
@@ -38,6 +41,7 @@ CREATE TABLE rooms (
     `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
     `img` VARCHAR(255) NOT NULL,
+    `img_path` VARCHAR(255) NOT NULL,
     `limit` INT NOT NULL
 );
 
@@ -46,6 +50,7 @@ INSERT INTO
 SET
     `name` = '横もく',
     `img` = '横もくB.jpeg',
+    `img_path` = 'img/test',
     `limit` = 5;
 
 DROP TABLE IF EXISTS users_rooms;

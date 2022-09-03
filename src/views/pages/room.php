@@ -1,4 +1,9 @@
-<?php ?>
+<?php
+    require(realpath("../../models/chats.php"));
+    require(realpath("../../config/dbconnect.php"));
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,11 +16,17 @@
     <link rel="stylesheet" href="../sass/room.css">
 </head>
 
+<?php
+$current_user = get_user($_SESSION['user_id']);
+$destination_user = get_user($_GET['user_id']);
+$messages = get_messages($current_user['id'], $destination_user['id']);
+?>
+
 <body>
     <header>
         <div class="room-header">
             <div class="room-back">←</div>
-            <div class="room-name">部屋1</div>
+            <div class="room-name">部屋</div>
         </div>
     </header>
 
@@ -30,18 +41,20 @@
         <div class="say left" id="b">
             <p class="face_icon">
                 <img src="../freePage images/m.jpeg" alt="m" width="110">
-                <span>かずき</span>
+                <span><?= $destination_user['name'] ?></span>
             </p>
+            <?php foreach ($messages as $message) :?>
             <div class="chatting">
                 <div class="sc">
                     <p>サンプルサンプルサンプルサンプルサンプル</p>
                 </div>
             </div>
+            <?php endforeach ?>
         </div>
     </section>
 
     <section>
-        <form action="">
+        <form action="room.php" method="post" >
             <input type="text" placeholder="Aa">
             <input type="submit" value="送信">
         </form>

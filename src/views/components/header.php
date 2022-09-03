@@ -18,4 +18,5 @@
                 <div class="my-profile"><a href=""><img src="" alt=""></a></div>
             </div>
             <h1 class="label-title"><?= $title ?></h1>
+            
         </header>

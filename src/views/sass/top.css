@@ -3,8 +3,11 @@ body {
 }
 
 .room-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 30px 20px;
   width: 100%;
   margin: 5% 0;
@@ -18,11 +21,13 @@ body {
   border-radius: 5px;
   overflow: hidden;
 }
+
 .room div {
   position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .room img {
   position: absolute;
   display: block;
@@ -35,12 +40,18 @@ body {
 section {
   text-align: center;
 }
+
 section form {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 98%;
 }
-section input[type=text] {
+
+section input[type="text"] {
   width: 80%;
   height: 35px;
   border-radius: 5px;
@@ -48,16 +59,24 @@ section input[type=text] {
   color: black;
   padding: 5px;
 }
-section input[type=text]::-moz-placeholder {
+
+section input[type="text"]::-webkit-input-placeholder {
   color: gray;
 }
-section input[type=text]:-ms-input-placeholder {
+
+section input[type="text"]:-ms-input-placeholder {
   color: gray;
 }
-section input[type=text]::placeholder {
+
+section input[type="text"]::-ms-input-placeholder {
   color: gray;
 }
-section input[type=submit] {
+
+section input[type="text"]::placeholder {
+  color: gray;
+}
+
+section input[type="submit"] {
   width: 15%;
   height: 35px;
   padding: 5px 0;
@@ -65,6 +84,7 @@ section input[type=submit] {
   color: white;
   border-radius: 5px;
 }
+
 section .create-room-bottun {
   width: 100%;
   height: 50px;
@@ -72,4 +92,5 @@ section .create-room-bottun {
   margin-top: 5%;
   background-color: #1e93ff;
   color: white;
-}/*# sourceMappingURL=top.css.map */
+}
+/*# sourceMappingURL=top.css.map */

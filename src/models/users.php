@@ -87,3 +87,13 @@ function userSearch($db, $condition)
     $output = $stmt->fetchAll();
     return $output;
 }
+
+//検索（ログイン用）
+function loginSearch($db, $condition)
+{
+    $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
+    $stmt->execute();
+    $output = $stmt->rowCount();
+    return $output;
+}
+

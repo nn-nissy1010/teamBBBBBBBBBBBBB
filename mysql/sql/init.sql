@@ -38,6 +38,7 @@ CREATE TABLE rooms (
     `id` INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
     `name` VARCHAR(255) NOT NULL,
     `img` VARCHAR(255) NOT NULL,
+    `img_path` VARCHAR(255) NOT NULL,
     `limit` INT NOT NULL
 );
 
@@ -46,6 +47,7 @@ INSERT INTO
 SET
     `name` = '横もく',
     `img` = '横もくB.jpeg',
+    `img_path` = 'img/test',
     `limit` = 5;
 
 DROP TABLE IF EXISTS users_rooms;

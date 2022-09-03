@@ -59,9 +59,20 @@
     width: 90%;
     height: 150px;
     display: none;
+
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
+}
+
+/* エラーメッセージのスタイル */
+.error {
+    width: 100%;
+    padding: 0;
+    display: inline-block;
+    font-size: 90%;
+    color: red;
+    box-sizing: border-box;
 }

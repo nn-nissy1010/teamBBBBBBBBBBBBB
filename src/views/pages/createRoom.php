@@ -54,7 +54,7 @@ if ($_POST) {
         </label>
         <p id="roomFileName">選択されていません</p>
     </div>
-    <div class="preview-image">
+    <div id="previewImage" class="preview-image">
     <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     </div>
     <input type="submit" class="form-Btn" value="部屋作成">
@@ -67,6 +67,7 @@ function previewImage(obj)
 		document.getElementById('preview').src = fileReader.result;
 	});
 	fileReader.readAsDataURL(obj.files[0]);
+    document.getElementById('previewImage').style.display = "block";
 }
 </script>
 <?php include("../components/footer.php"); ?>

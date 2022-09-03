@@ -1,12 +1,47 @@
-.body-wrapper{
+header{
+    height: 150px;
+}
+
+.body-wrapper {
     width: 100%;
     height: auto;
     padding: 30px;
     overflow: hidden;
 }
 
-.label-title{
- text-align: center;
- font-size: 24px;
- font-family: 'Courier New', Courier, monospace;
+.label-title {
+    text-align: center;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.header-sentence {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 36px;
+    font-family: fantasy;
+    margin-bottom: 30px;
+    color: #1E93FF
+}
+
+.my-profile {
+    position: absolute;
+    top: 50%;
+    right: 1.5%;
+    transform: translateY(-25%);
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: aquamarine;
+    border: 3px solid #1E93FF;
+    box-sizing: border-box;
+}
+
+.header-content {
+    position: relative;
+    height: 65%;
 }

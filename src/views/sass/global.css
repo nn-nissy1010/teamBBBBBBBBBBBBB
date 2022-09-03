@@ -5,7 +5,8 @@
  * github.com/filipelinhares/ress
  */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   word-break: normal;
   -moz-tab-size: 4;
@@ -15,7 +16,8 @@ html {
 
 *, :after, :before {
   background-repeat: no-repeat;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 :after, :before {
@@ -65,7 +67,7 @@ a:active, a:hover {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
 }
 
 pre {
@@ -84,11 +86,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 input {
@@ -200,6 +202,7 @@ progress {
     clip: rect(0 0 0 0) !important;
   }
 }
+
 [aria-busy=true] {
   cursor: progress;
 }
@@ -222,5 +225,6 @@ progress {
 .label-title {
   text-align: center;
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
-}/*# sourceMappingURL=global.css.map */
+  font-family: 'Courier New', Courier, monospace;
+}
+/*# sourceMappingURL=global.css.map */

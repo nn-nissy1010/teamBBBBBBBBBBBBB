@@ -9,7 +9,7 @@
 
 .form-label {
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .form-input {
@@ -35,7 +35,7 @@
   position: absolute;
   opacity: 0;
   width: 280px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 .form-Btn {
@@ -52,4 +52,5 @@
   color: #fff;
   font-weight: bold;
   font-size: 20px;
-}/*# sourceMappingURL=createAccount.css.map */
+}
+/*# sourceMappingURL=createAccount.css.map */

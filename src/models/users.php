@@ -60,3 +60,24 @@ function userSearch($db, $condition)
     $output = $stmt->fetchAll();
     return $output;
 }
+
+//検索（ログイン用）
+function loginSearch($db, $condition)
+{
+    $stmt = $db->prepare("SELECT * from `users` WHERE email = ?");
+    $stmt->bindValue(1, $condition, PDO::PARAM_STR);
+    $stmt->execute();
+    $output = $stmt->rowCount();
+    return $output;
+}
+
+function loginSearch2($db, $condition, $condition2)
+{
+    $stmt = $db->prepare("SELECT * from `users` WHERE email = ? and password = ?");
+    $stmt->bindValue(1, $condition, PDO::PARAM_STR);
+    $stmt->bindValue(2, $condition2, PDO::PARAM_STR);
+    $stmt->execute();
+    $output = $stmt->rowCount();
+    return $output;
+}
+

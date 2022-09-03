@@ -10,19 +10,33 @@ body {
     gap: 30px 20px;
     width: 100%;
     margin: 5% 0;
+}
 
+.room {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border: solid 1px $main-color;
+    border-radius: 5px;
+    overflow: hidden;
     div {
-        width: 65px;
-        height: 65px;
-        border: solid 1px $main-color;
-        border-radius: 5px;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+    img{
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
 section {
     text-align: center;
 
-    form{
+    form {
         display: flex;
         justify-content: space-between;
         width: 98%;
@@ -35,12 +49,13 @@ section {
         background-color: #eaedf2;
         color: black;
         padding: 5px;
+
         &::placeholder {
             color: gray;
         }
     }
 
-    input[type="submit"]{
+    input[type="submit"] {
         width: 15%;
         height: 35px;
         padding: 5px 0;

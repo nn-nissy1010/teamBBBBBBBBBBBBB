@@ -14,7 +14,7 @@
     }
 ?>
 <?php include("../components/header.php"); ?>
-        <form class="form-wrapper" action="createAccount.php" method="post">
+        <form class="form-wrapper" action="createAccount.php" method="post" enctype="multipart/form-data">
             <div class="form-sample">
                 <p class="form-label">氏名</p>
                 <input type="text" class="form-input" placeholder="例）鈴木一郎" name="name">

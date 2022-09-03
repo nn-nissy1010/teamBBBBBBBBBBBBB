@@ -25,4 +25,20 @@ function roomCreate($db,$name,$img,$limit){
 // 削除
 
 
-// 読み込み
+// 全読み込み
+function roomRead($db)
+{
+    $stmt = $db->prepare("select * from rooms");
+    $stmt->execute();
+    $allRoom = $stmt->fetchAll();
+    return $allRoom;
+}
+
+// 検索
+function roomSearch($db, $condition)
+{
+    $stmt = $db->prepare("SELECT * from `rooms` WHERE $condition");
+    $stmt->execute();
+    $searchedRoom = $stmt->fetchAll();
+    return $searchedRoom;
+}

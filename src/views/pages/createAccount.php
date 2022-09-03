@@ -12,8 +12,6 @@
         $img = $_POST['img'];
         userCreate($db, $name, $email, $tel, $password, $img);
     }
-
-
 ?>
 <?php include("../components/header.php"); ?>
         <form class="form-wrapper" action="createAccount.php" method="post">

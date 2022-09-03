@@ -1,16 +1,19 @@
-<?php $title = "会員登録";
+<?php 
+    $title = "会員登録";
     $cssLink = "../sass/createAccount.css";
     $jsLink = "../js/createAccount/script.js";
     require(realpath("../../models/users.php"));
     require(realpath("../../config/dbconnect.php"));
 
-    if ($_POST) {
+
+    if (isset($_POST)) {
         $name = $_POST['name'];
         $tel = $_POST['tel'];
         $email = $_POST['email'];
         $password = $_POST['password'];
         $img = $_POST['img'];
         userCreate($db, $name, $email, $tel, $password, $img);
+
     }
 ?>
 <?php include("../components/header.php"); ?>
@@ -44,4 +47,31 @@
             </div>
             <input type="submit" class="form-Btn" value="会員登録">
         </form>
-        <?php include("../components/footer.php"); ?>
+        <?php
+
+// 使用する変数を初期化
+    $name= '';
+    $tel= '';
+    $email= '';
+    $password= '';
+    $img= '';
+
+//エラー内容
+    $errors =[];
+    // 氏名
+    if (empty($_POST['name'])) {
+        $errors[] = '氏名は必須項目です。';
+    }
+    // 電話番号
+    if (empty($_POST['tel'])) {
+        $errors[] = '電話番号は必須項目です。';
+    }elseif(!preg_match( '/^0[0-9]{9,10}\z/', '文字列')){
+        $errors[] = "電話番号は0~9の値で入力してください。";
+    }
+    // Eメール
+    if (empty($_POST['email'])) {
+        $errors[] = 'Eメールは必須項目です。';
+    }elseif( !preg_match( '/^[0-9a-z_.\/?-]+@([0-9a-z-]+\.)+[0-9a-z-]+$/', $_POST['email']) ) {
+        $errors[] = "「メールアドレス」は正しい形式で入力してください。";
+    }
+     include("../components/footer.php"); ?>

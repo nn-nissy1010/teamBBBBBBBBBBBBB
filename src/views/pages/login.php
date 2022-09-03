@@ -7,14 +7,13 @@ require(realpath("../../config/dbconnect.php"));
 
 if(isset($_POST['email']) && isset($_POST['password'])){
   $email = $_POST['email'];
-  $condition = "$email";
+  $condition = "email = '$email'";
   $emailCheck = loginSearch($db, $condition);
   if($emailCheck == 1){
     $email = $_POST['email'];
     $password = sha1($_POST['password']);
-    $condition = "$email";
-    $condition2 = "$password";
-    $passwordCheck = loginSearch2($db, $condition, $condition2);
+    $condition = "email = '$email' and password = '$password'";
+    $passwordCheck = loginSearch($db, $condition);
     if($passwordCheck == 1){
       header("Location: /views/pages/top.php");
     }

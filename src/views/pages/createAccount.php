@@ -17,7 +17,7 @@
     }
 ?>
 <?php include("../components/header.php"); ?>
-        <form class="form-wrapper validation-form" action="createAccount.php" method="post" novalidate>
+        <form class="form-wrapper validation-form" action="createAccount.php" method="post" enctype="multipart/form-data" novalidate>
             <div class="form-sample">
                 <p class="form-label">氏名</p>
                 <input type="text" class="form-input required" placeholder="例）鈴木一郎" name="name">

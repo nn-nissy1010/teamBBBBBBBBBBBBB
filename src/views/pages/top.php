@@ -4,12 +4,12 @@ $cssLink = "../sass/top.css";
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
 
-if(isset($_POST['name']) && strlen($_POST['name']) != 0){
+if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
     $name = $_POST["name"];
     $condition = "name = '$name'";
     roomSearch($db, $condition);
-    $rooms= roomSearch($db, $condition);
-}else{
+    $rooms = roomSearch($db, $condition);
+} else {
     $rooms = roomRead($db);
 }
 ?>
@@ -24,7 +24,10 @@ if(isset($_POST['name']) && strlen($_POST['name']) != 0){
 <section>
     <div class="room-box">
         <?php foreach ($rooms as $room) : ?>
-            <div><?= $room["name"]; ?></div>
+            <div class="room">
+                <div><?= $room["name"]; ?></div>
+                <img src="<?= $room["img_path"] ?>" alt="">
+            </div>
         <?php endforeach; ?>
     </div>
 </section>

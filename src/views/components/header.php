@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,11 +19,17 @@
         <header>
             <div class="header-content">
                 <p class="header-sentence">IDO<br>BTA</p>
+                <?php
+                if($_SESSION['name'] != "" && $_SESSION['email'] != "" && $_SESSION['password'] != "" && $_SESSION['img_path'] != ""){
+                ?>
                 <div class="my-profile">
                     <a href="">
-                        <img src="" alt="">
+                        <img class="my-profile_image" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
                     </a>
                 </div>
+                <?php
+                }
+                ?>
             </div>
             <h1 class="label-title"><?= $title ?></h1>
             

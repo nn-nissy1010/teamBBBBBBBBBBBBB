@@ -26,20 +26,13 @@ VALUES
     $stmt->execute();
 }
 
-function uploadImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name, $upload_dir){
+function uploadImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name){
     if (count($err_msgs) === 0) {
         //ファイルはあるかどうか
         if (is_uploaded_file($tmp_path)) {
             if (move_uploaded_file($tmp_path, $img_path)) {
-                echo $img_name . 'を' . $upload_dir . 'アップしました。';
                 //DBに保存する(ルーム名、画像ファイル名、画像ファイルパス、ルーム上限人数)
                 $result = userCreate($db, $name, $email, $tel, $password, $img_name, $img_path);
-                var_dump($result);
-                if($result){
-                    echo 'データベースに保存しました！';
-                }else{
-                    echo 'データベースへの保存が失敗しました！';
-                }
             }else{
                 echo 'ファイルが保存できませんでした。';
             }

@@ -247,18 +247,27 @@ header {
 
 .my-profile {
   position: absolute;
-  top: 50%;
-  right: 1.5%;
+  position: fixed;
+  top: 30px;
+  left: 10px;
   -webkit-transform: translateY(-25%);
           transform: translateY(-25%);
-  width: 65px;
-  height: 65px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   overflow: hidden;
   background-color: aquamarine;
   border: 3px solid #1E93FF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+}
+
+.my-profile_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .header-content {

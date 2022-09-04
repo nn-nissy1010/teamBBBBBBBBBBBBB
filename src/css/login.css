@@ -1,4 +1,4 @@
-.login-wrapper{
+.login-wrapper {
   width: 80%;
   height: 350px;
   position: relative;
@@ -8,14 +8,14 @@
   margin-top: 70px;
 }
 
-.create-link{
+.create-link {
   width: 100%;
   margin: 0 auto;
   display: block;
   text-align: center;
 }
 
-.email, .password{
+.email, .password {
   border: 1px solid rgb(171, 171, 171);
   display: block;
   width: 100%;
@@ -26,13 +26,14 @@
   padding: 0 20px;
 }
 
-.login{
+.login {
   display: block;
   width: 160px;
   margin: 70px auto;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
-  border: 1px solid ;
+  border: 1px solid;
   border-radius: 10px;
 }
+/*# sourceMappingURL=login.css.map */

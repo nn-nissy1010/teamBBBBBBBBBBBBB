@@ -10,7 +10,7 @@ session_start();
 unset($_SESSION['name']);
 unset($_SESSION['email']);
 unset($_SESSION['password']);
-unset($_SESSION['img']);
+unset($_SESSION['img_path']);
 
 if(isset($_POST['email']) && isset($_POST['password'])){
     $email = $_POST['email'];
@@ -22,15 +22,18 @@ if(isset($_POST['email']) && isset($_POST['password'])){
       $_SESSION['name'] = $userInfo[0]['name'];
       $_SESSION['email'] = $userInfo[0]['email'];
       $_SESSION['password'] = $userInfo[0]['password'];
-      $_SESSION['img'] = $userInfo[0]['img'];
+      $_SESSION['img_path'] = $userInfo[0]['img_path'];
       header("Location: /views/pages/top.php");
     }
 }
 ?>
 <?php include("../components/header.php"); ?>
-<form action="login.php" method="POST">
-  <input type="text" placeholder="mail" name="email">
-  <input type="text" placeholder="password" name="password">
-  <input type="submit" value="ログイン">
-</form>
+<div class="login-wrapper">
+  <form  action="login.php" method="POST">
+    <input class="email" type="text" placeholder="email" name="email">
+    <input class="password" type="text" placeholder="password" name="password">
+    <input class="login" type="submit" value="ログイン">
+  </form>
+  <a href="./createAccount.php" class="create-link">新規作成はこちら</a>
+</div>
 <?php include("../components/footer.php"); ?>

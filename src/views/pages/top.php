@@ -1,8 +1,12 @@
 <?php $title = "トップ画面";
 $cssLink = "../sass/top.css";
 
+
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
+require(realpath("../../auth/auth.php"));
+
+auth('top.php');
 
 if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
     $name = $_POST["name"];

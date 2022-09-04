@@ -15,8 +15,11 @@
         <header>
             <div class="header-content">
                 <p class="header-sentence">IDO<br>BTA</p>
-                <div class="my-profile"><a href=""><img src="" alt=""></a></div>
+                <form method="get" action="">
+                    <input type="submit" name="btn_logout" value="ログアウト">
+                </form>
+                <!-- <div class="my-profile"><a href=""><img src="" alt=""></a></div> -->
             </div>
             <h1 class="label-title"><?= $title ?></h1>
-            
+
         </header>

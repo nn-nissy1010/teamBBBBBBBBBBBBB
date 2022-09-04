@@ -1,8 +1,12 @@
 <?php $title = "トップ画面";
 $cssLink = "../sass/top.css";
 
+
 require(realpath("../../models/rooms.php"));
 require(realpath("../../config/dbconnect.php"));
+require(realpath("../../auth/auth.php"));
+
+auth('top.php');
 
 session_start();
 

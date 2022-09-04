@@ -118,7 +118,7 @@ function loginSearch($db, $condition)
 {
     $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
     $stmt->execute();
-    $output = $stmt->rowCount();
+    $output = $stmt->fetchAll();
     return $output;
 }
 

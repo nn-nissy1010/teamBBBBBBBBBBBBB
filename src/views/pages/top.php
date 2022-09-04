@@ -8,6 +8,8 @@ require(realpath("../../auth/auth.php"));
 
 auth('top.php');
 
+session_start();
+
 if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
     $name = $_POST["name"];
     $condition = "name = '$name'";

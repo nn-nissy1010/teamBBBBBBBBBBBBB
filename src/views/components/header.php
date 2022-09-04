@@ -18,7 +18,11 @@
                 <form method="get" action="">
                     <input type="submit" name="btn_logout" value="ログアウト">
                 </form>
-                <!-- <div class="my-profile"><a href=""><img src="" alt=""></a></div> -->
+                <div class="my-profile">
+                    <a href="">
+                        <img src="" alt="">
+                    </a>
+                </div>
             </div>
             <h1 class="label-title"><?= $title ?></h1>
 

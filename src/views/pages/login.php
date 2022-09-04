@@ -45,6 +45,27 @@ require(realpath("../../config/dbconnect.php"));
 //     header("Location: http://" . $_SERVER['HTTP_HOST'] . "Location: /views/pages/login.php");
 //   }
 // }
+session_start();
+
+unset($_SESSION['name']);
+unset($_SESSION['email']);
+unset($_SESSION['password']);
+unset($_SESSION['img']);
+
+if(isset($_POST['email']) && isset($_POST['password'])){
+    $email = $_POST['email'];
+    $password = sha1($_POST['password']);
+    $condition = "email = '$email' and password = '$password'";
+    $userInfo = userSearch($db, $condition);
+    $loginCheck = count($userInfo);
+    if($loginCheck == 1){
+      $_SESSION['name'] = $userInfo[0]['name'];
+      $_SESSION['email'] = $userInfo[0]['email'];
+      $_SESSION['password'] = $userInfo[0]['password'];
+      $_SESSION['img'] = $userInfo[0]['img'];
+      header("Location: /views/pages/top.php");
+    }
+}
 ?>
 <?php include("../components/header.php"); ?>
 <form action="login.php" method="POST">

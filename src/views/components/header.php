@@ -22,6 +22,9 @@ session_start();
                 <?php
                 if($_SESSION['name'] != "" && $_SESSION['email'] != "" && $_SESSION['password'] != "" && $_SESSION['img_path'] != ""){
                 ?>
+                <form method="get" action="">
+                    <input class="logout" type="submit" name="btn_logout" value="ログアウト">
+                </form>
                 <div class="my-profile">
                     <a href="">
                         <img class="my-profile_image" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
@@ -32,5 +35,5 @@ session_start();
                 ?>
             </div>
             <h1 class="label-title"><?= $title ?></h1>
-            
+
         </header>

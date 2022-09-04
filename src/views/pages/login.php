@@ -5,6 +5,7 @@ $jsLink = "";
 require(realpath("../../models/users.php"));
 require(realpath("../../config/dbconnect.php"));
 
+session_name("user");
 session_start();
 
 unset($_SESSION['name']);
@@ -12,20 +13,48 @@ unset($_SESSION['email']);
 unset($_SESSION['password']);
 unset($_SESSION['img_path']);
 
-if(isset($_POST['email']) && isset($_POST['password'])){
-    $email = $_POST['email'];
-    $password = sha1($_POST['password']);
-    $condition = "email = '$email' and password = '$password'";
-    $userInfo = userSearch($db, $condition);
-    $loginCheck = count($userInfo);
-    if($loginCheck == 1){
-      $_SESSION['name'] = $userInfo[0]['name'];
-      $_SESSION['email'] = $userInfo[0]['email'];
-      $_SESSION['password'] = $userInfo[0]['password'];
-      $_SESSION['img_path'] = $userInfo[0]['img_path'];
-      header("Location: /views/pages/top.php");
-    }
+if (!empty($_POST)) {
+  $login = $db->prepare('SELECT * FROM users WHERE email=? AND password=?');
+  $login->execute(array(
+    $_POST['email'],
+    sha1($_POST['password'])
+  ));
+  $user = $login->fetch();
+
+  if ($user) {
+    $_SESSION = array();
+    $_SESSION['name'] = $user['name'];
+    $_SESSION['email'] = $user['email'];
+    $_SESSION['password'] = $user['password'];
+    $_SESSION['img_path'] = $user['img_path'];
+    $_SESSION['time'] = time();
+    header("Location: http://" . $_SERVER['HTTP_HOST'] . "/views/pages/top.php");
+    exit();
+  } else {
+    $error = 'fail';
+    header("Location: http://" . $_SERVER['HTTP_HOST'] . "Location: /views/pages/login.php");
+  }
 }
+
+// unset($_SESSION['name']);
+// unset($_SESSION['email']);
+// unset($_SESSION['password']);
+// unset($_SESSION['img_path']);
+
+// if(isset($_POST['email']) && isset($_POST['password'])){
+//     $email = $_POST['email'];
+//     $password = sha1($_POST['password']);
+//     $condition = "email = '$email' and password = '$password'";
+//     $userInfo = userSearch($db, $condition);
+//     $loginCheck = count($userInfo);
+//     if($loginCheck == 1){
+//       $_SESSION['name'] = $userInfo[0]['name'];
+//       $_SESSION['email'] = $userInfo[0]['email'];
+//       $_SESSION['password'] = $userInfo[0]['password'];
+//       $_SESSION['img_path'] = $userInfo[0]['img_path'];
+//       header("Location: /views/pages/top.php");
+//     }
+//   }
 ?>
 <?php include("../components/header.php"); ?>
 <div class="login-wrapper">

@@ -274,4 +274,9 @@ header {
   position: relative;
   height: 65%;
 }
+
+.logout {
+  position: absolute;
+  right: -20px;
+}
 /*# sourceMappingURL=global.css.map */

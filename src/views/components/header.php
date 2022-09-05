@@ -1,5 +1,10 @@
 <?php
+require(realpath("../../models/users.php"));
 session_start();
+
+$loginUserId = $_SESSION['id'];
+$condition = "id = '$loginUserId'";
+$loginUser = userSearch($db, $condition)[0];
 ?>
 
 <!DOCTYPE html>
@@ -28,22 +33,22 @@ session_start();
                         <input class="logout" type="submit" name="btn_logout" value="ログアウト">
                     </form>
                     <div class="my-profile" onclick="userInfo()">
-                        <img class="my-profile_image" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
+                        <img class="my-profile_image" src="../image/<?= $loginUser['img_path'] ?>" alt="">
                     </div>
                     <div id="profile" class="profile">
                         <p class="profile-title">ユーザープロフィール</p>
                         <div class="profile-wrapper">
                             <p class="profile-detail-title">名前</p>
                             <p class="profile-detail">
-                                <?php echo $_SESSION['name']; ?>
+                                <?php echo $loginUser['name']; ?>
                             </p>
                             <p class="profile-detail-title">メールアドレス</p>
                             <p class="profile-detail">
-                                <?php echo $_SESSION['email']; ?>
+                                <?php echo $loginUser['email']; ?>
                             </p>
                             <div class="modal-img-box">
                                 <p class="profile-detail-title">画像</p>
-                                <img class="profile_img" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
+                                <img class="profile_img" src="../image/<?= $loginUser['img_path'] ?>" alt="">
                             </div>
                         </div>
                         <div class="p-button">

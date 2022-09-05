@@ -1,7 +1,6 @@
 <?php $title = "ユーザー情報編集";
 $cssLink = "../sass/editAccount.css";
 $jsLink = "../js/editAccount/script.js";
-require(realpath("../../models/users.php"));
 require(realpath("../../config/dbconnect.php"));
 require(realpath("../../auth/auth.php"));
 

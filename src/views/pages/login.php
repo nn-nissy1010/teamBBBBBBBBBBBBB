@@ -2,7 +2,6 @@
 $title = "ログイン画面";
 $cssLink = "../sass/login.css";
 $jsLink = "";
-require(realpath("../../models/users.php"));
 require(realpath("../../config/dbconnect.php"));
 
 session_name("user");

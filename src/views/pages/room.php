@@ -22,6 +22,34 @@ if (empty($_SESSION['filesize'])) {
     $_SESSION['filesize'] = $filesize;
 }
 
+// if($_POST['trash']){
+//     //get all your data on file
+// $data = file_get_contents($J_file);
+
+// // decode json to associative array
+// $json_arr = json_decode($data, true)["chatlog"];
+
+// var_dump($json_arr);
+// // get array index to delete
+// $arr_index = array();
+// foreach ($json_arr as $key => $value) {
+//     if ($value['text'] == "テスト") {
+//         $arr_index[] = $key;
+//     }
+// }
+
+// // delete data
+// foreach ($arr_index as $i) {
+//     unset($json_arr[$i]);
+// }
+
+// // // rebase array
+// $json_arr = array_values($json_arr);
+
+// // // encode array to json and save to file
+// file_put_contents($J_file, json_encode($json_arr));
+// }
+
 // ユーザーアイコンが押された時
 // if (isset($_GET['person'])) {
 //     $_SESSION['person'] = $_GET['person'];
@@ -37,6 +65,7 @@ if (empty($_SESSION['filesize'])) {
 //         $_SESSION['person']  = 'person2'; //現在1なら2をアクティブに
 //     }
 // }
+
 $_SESSION["roomId"] = $_GET['id'];
 
 if (isset($_POST['submit']) && $_POST['submit'] === "送信") { // #1
@@ -111,6 +140,10 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
     header('Location:./room.php');
     exit;
 }
+
+var_dump($_POST['edit']);
+var_dump($_POST['trash']);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -154,7 +187,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
         <div class="chat-area" id="chat-area">
             <?php echo $result; ?>
         </div>
-        <!-- <div class="say right" id="b"><div class="chat-box"><p class="face_icon"><span><?= $object->person?></span></p><div class="chatting"><div class="sc"><p><?=str_replace("\r\n", "<br>", $object->text)?></p></div></div><input type="hidden" name="trash" value="trash"><span>🗑</span></input><input type="hidden" name="edit" value="edit"><span>✎</span></input></div></div> -->
+        <div class="say right" id="b"><div class="chat-box"><p class="face_icon"><span><?= $object->person?></span></p><div class="chatting"><div class="sc"><p><?=str_replace("\r\n", "<br>", $object->text)?></p></div></div><form action="room.php?id=<?= $_GET['id'] ?>" method="post"><input type="hidden" name="trash" value="テスト"></input><input type="submit" value="">🗑</input></form><form action="room.php?id=<?= $_GET['id'] ?>" method="post"><input type="hidden" name="edit" value="テスト"></input><input type="submit" value="">✎</input></form></div></div>
     </section>
 
     <section>

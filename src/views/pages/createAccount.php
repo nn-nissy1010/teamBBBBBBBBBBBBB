@@ -1,7 +1,6 @@
 <?php $title = "会員登録";
 $cssLink = "../sass/createAccount.css";
 $jsLink = "../js/createAccount/script.js";
-require(realpath("../../models/users.php"));
 require(realpath("../../config/dbconnect.php"));
 
 if ($_POST) {

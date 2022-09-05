@@ -8,12 +8,15 @@ require(realpath("../../config/dbconnect.php"));
 session_name("user");
 session_start();
 
+createToken();
+
 unset($_SESSION['name']);
 unset($_SESSION['email']);
 unset($_SESSION['password']);
 unset($_SESSION['img_path']);
 
 if (!empty($_POST)) {
+  validateToken();
   $login = $db->prepare('SELECT * FROM users WHERE email=? AND password=?');
   $login->execute(array(
     $_POST['email'],
@@ -40,10 +43,12 @@ if (!empty($_POST)) {
 <?php include("../components/header.php"); ?>
 <div class="login-wrapper">
   <form  action="login.php" method="POST">
-    <input class="email" type="text" placeholder="email" name="email">
-    <input class="password" type="text" placeholder="password" name="password">
+    <input class="email" type="email" placeholder="email" name="email">
+    <input class="password" type="password" placeholder="password" name="password">
     <input class="login" type="submit" value="ログイン">
+    <input type="hidden" name="token" value="<?= h($_SESSION['token'])?>">
   </form>
+  
   <a href="./createAccount.php" class="create-link">新規作成はこちら</a>
 </div>
 <?php include("../components/footer.php"); ?>

@@ -6,7 +6,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  margin-top: 70px;
+  margin-top: 120px;
 }
 
 .create-link {
@@ -20,7 +20,6 @@
   border: 1px solid #ababab;
   display: block;
   width: 100%;
-<<<<<<< HEAD
   border-radius: 10px;
   height: 40px;
   font-size: 20px;
@@ -31,7 +30,7 @@
 .login {
   display: block;
   width: 160px;
-  margin: 70px auto;
+  margin: 90px auto;
   font-size: 18px;
   font-weight: bold;
   cursor: pointer;
@@ -39,6 +38,3 @@
   border-radius: 10px;
 }
 /*# sourceMappingURL=login.css.map */
-=======
-}/*# sourceMappingURL=login.css.map */
->>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178

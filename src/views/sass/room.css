@@ -76,7 +76,6 @@ section input[type=submit] {
   padding-right: 20px;
   text-align: center;
   vertical-align: top;
-  width: 150px;
 }
 
 .face_icon img {
@@ -104,6 +103,7 @@ section input[type=submit] {
 
 .say {
   margin: 1.2em 0;
+  display: flex;
 }
 
 .sc {
@@ -116,35 +116,21 @@ section input[type=submit] {
   border-radius: 12px;
 }
 
-.sc:after {
-  display: inline-block;
-  position: absolute;
-  top: 18px;
-  left: 10px;
-  border: 12px solid transparent;
-  border-right: 12px solid #eee;
-  content: "";
-}
-
 .right .sc {
   background: #1e93ff;
   border: solid 2px #1e93ff;
   color: #000000;
 }
 
+.right {
+  flex-direction: row-reverse;
+}
+.right span {
+  font-size: 25px;
+}
+
 .right .sc:before, .right .sc:after {
   border-left-color: #1e93ff;
-}
-
-.right .sc:before, .right .sc:after {
-  right: 10px;
-  left: auto;
-  border: 12px solid transparent;
-  border-left: 12px solid #1e93ff;
-}
-
-.right .face_icon {
-  padding: 0 20px 0 20px;
 }
 
 .sc p {

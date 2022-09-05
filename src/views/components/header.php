@@ -34,7 +34,10 @@ session_start();
                     echo $_SESSION['name'];
                     echo $_SESSION['email'];
                     ?>
+                    <div class="modal-img-box">
                     <img class="profile_img" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
+                    </div>
+                    <a href="../pages/editAccount.php?id=<?= $_SESSION['id'] ?>">編集する</a>
                     <button onclick="closeModal()">閉じる</button>
                 </div>
                 <script>

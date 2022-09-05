@@ -39,7 +39,7 @@ if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
 </section>
 
 <section>
-    <button class="create-room-bottun">部屋を作る→</button>
+    <button class="create-room-bottun"><a href="createRoom.php">部屋を作る→</a></button>
 </section>
 
 </body>

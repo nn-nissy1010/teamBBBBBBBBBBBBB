@@ -127,7 +127,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
 <body>
     <header>
         <div class="room-header">
-            <a href="top.php" class="room-back">←</a>
+            <a href="top.php" class="room-back" style="color:#fff; font-weight:bold;">←</a>
             <div class="room-name">部屋<?= $_SESSION["roomId"]?></div>
         </div>
     </header>

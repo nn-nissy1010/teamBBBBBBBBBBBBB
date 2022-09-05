@@ -69,6 +69,7 @@
   height: 150px;
   display: none;
 }
+
 .preview-image img {
   width: 100%;
   height: 100%;
@@ -82,5 +83,7 @@
   display: inline-block;
   font-size: 90%;
   color: red;
-  box-sizing: border-box;
-}/*# sourceMappingURL=createRoom.css.map */
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+/*# sourceMappingURL=createRoom.css.map */

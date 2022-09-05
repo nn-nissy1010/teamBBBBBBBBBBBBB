@@ -5,7 +5,8 @@
  * github.com/filipelinhares/ress
  */
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   word-break: normal;
   -moz-tab-size: 4;
@@ -15,7 +16,8 @@ html {
 
 *, :after, :before {
   background-repeat: no-repeat;
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 :after, :before {
@@ -65,7 +67,7 @@ a:active, a:hover {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace, monospace;
+  font-family: monospace,monospace;
 }
 
 pre {
@@ -84,11 +86,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -0.25em;
+  bottom: -.25em;
 }
 
 sup {
-  top: -0.5em;
+  top: -.5em;
 }
 
 input {
@@ -200,6 +202,7 @@ progress {
     clip: rect(0 0 0 0) !important;
   }
 }
+
 [aria-busy=true] {
   cursor: progress;
 }
@@ -229,10 +232,19 @@ header {
 .label-title {
   text-align: center;
   font-size: 24px;
-  font-family: "Courier New", Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 40px;
 }
 
 .header-sentence {
+<<<<<<< HEAD
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+=======
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651
   text-align: center;
   font-size: 36px;
   font-family: fantasy;
@@ -241,8 +253,24 @@ header {
 
 .my-profile {
   position: absolute;
+<<<<<<< HEAD
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-color: aquamarine;
+  border: 3px solid #1E93FF;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+=======
   top: 10px;
   filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651
 }
 .my-profile_image {
   width: 75px;
@@ -305,6 +333,9 @@ header {
 .profile_img {
   width: 100%;
 }
+<<<<<<< HEAD
+/*# sourceMappingURL=global.css.map */
+=======
 
 .modal-img-box {
   width: 100%;
@@ -351,3 +382,4 @@ header {
 .round_btn::after {
   transform: translate(-50%, -50%) rotate(-45deg);
 }/*# sourceMappingURL=global.css.map */
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651

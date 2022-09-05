@@ -21,8 +21,8 @@ if ($_POST) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $img = $_POST['img'];
-    uploadUserImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name, $upload_dir); 
-    header('Location: top.php' );
+    uploadUserImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name, $upload_dir);
+    header("Location: http://" . $_SERVER['HTTP_HOST'] . "/views/pages/login.php");
 }
 ?>
 <?php include("../components/header.php"); ?>

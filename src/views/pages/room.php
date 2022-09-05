@@ -53,12 +53,12 @@ if (isset($_POST['submit']) && $_POST['submit'] === "送信") { // #1
         // ファイルがある場合 追記処理
         $file = str_replace(array(" ", "\n", "\r"), "", $file);
         $file = mb_substr($file, 0, mb_strlen($file) - 2);
-        $json = json_encode($chat);
+        $json = json_encode($chat ,JSON_UNESCAPED_UNICODE);
         $json = $file . ',' . $json . ']}';
         file_put_contents($J_file, $json, LOCK_EX);
     } else { // #2
         // ファイルがない場合 新規作成処理
-        $json = json_encode($chat);
+        $json = json_encode($chat ,JSON_UNESCAPED_UNICODE);
         $json = '{"chatlog":[' . $json . ']}';
         file_put_contents($J_file, $json, FILE_APPEND | LOCK_EX);
     } // #2

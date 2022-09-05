@@ -79,9 +79,9 @@ if ($file = file_get_contents($J_file)) {
             if ($object->roomId === $_SESSION["roomId"]) {
                 // 第二回目以降
                 if ($object->person === $loginUser['name']) {
-                    $result =  $result . '<div class="say right" id="b"><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result =  $result . '<div class="say right" id="b"><div><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 } else {
-                    $result = $result . '<div class="say left" id="b"><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result = $result . '<div class="say left" id="b"><div><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 }
             }
         } else {
@@ -90,9 +90,9 @@ if ($file = file_get_contents($J_file)) {
             if ($object->roomId === $_SESSION["roomId"]) {
                 // 第二回目以降
                 if ($object->person === $loginUser['name']) {
-                    $result =  $result . '<div class="say right" id="b"><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result =  $result . '<div class="say right" id="b"><div><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 } else {
-                    $result = $result . '<div class="say left" id="b"><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result = $result . '<div class="say left" id="b"><div><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 }
             }
         }
@@ -128,7 +128,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
     <header>
         <div class="room-header">
             <div class="room-back">←</div>
-            <div class="room-name">部屋1</div>
+            <div class="room-name">部屋<?= $_SESSION["roomId"]?></div>
         </div>
     </header>
 

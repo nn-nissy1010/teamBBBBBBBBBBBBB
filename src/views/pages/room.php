@@ -142,7 +142,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
         </div>
         <div class="say left" id="b">
             <p class="face_icon">
-                <img src="../freePage images/m.jpeg" alt="m" width="110">
+                <img src="<?= $_SESSION["img_path"] ?>" alt="m" width="110">
                 <span>かずき</span>
             </p>
             <div class="chatting">

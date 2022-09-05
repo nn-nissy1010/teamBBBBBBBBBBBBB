@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="ja">
 
@@ -15,14 +19,35 @@
         <header>
             <div class="header-content">
                 <p class="header-sentence">IDO<br>BTA</p>
+                <?php
+                if($_SESSION['name'] != "" && $_SESSION['email'] != "" && $_SESSION['password'] != "" && $_SESSION['img_path'] != ""){
+                ?>
                 <form method="get" action="">
-                    <input type="submit" name="btn_logout" value="ログアウト">
+                    <input class="logout" type="submit" name="btn_logout" value="ログアウト">
                 </form>
-                <div class="my-profile">
-                    <a href="">
-                        <img src="" alt="">
-                    </a>
+                <div class="my-profile" onclick="userInfo()">
+                    <img class="my-profile_image" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
                 </div>
+                <div id="profile" class="profile">
+                    <h1>ユーザープロフィール</h1>
+                    <?php 
+                    echo $_SESSION['name'];
+                    echo $_SESSION['email'];
+                    ?>
+                    <img class="profile_img" src="../image/<?= $_SESSION['img_path'] ?>" alt="">
+                    <button onclick="closeModal()">閉じる</button>
+                </div>
+                <script>
+                    function userInfo(){
+                        document.getElementById('profile').style.display = "block";
+                    }
+                    function closeModal(){
+                        document.getElementById('profile').style.display = "none";
+                    }
+                </script>
+                <?php
+                }
+                ?>
             </div>
             <h1 class="label-title"><?= $title ?></h1>
 

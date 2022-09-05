@@ -1,3 +1,39 @@
-html{
-  width: 100%;
+.login-wrapper{
+  width: 80%;
+  height: 350px;
+  position: relative;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 70px;
 }
+
+.create-link{
+  width: 100%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+}
+
+.email, .password{
+  border: 1px solid rgb(171, 171, 171);
+  display: block;
+  width: 100%;
+  border-radius: 10px;
+  height: 40px;
+  font-size: 20px;
+  margin: 40px 0;
+  padding: 0 20px;
+}
+
+.login{
+  display: block;
+  width: 160px;
+  margin: 70px auto;
+  font-size: 18px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid ;
+  border-radius: 10px;
+}
+

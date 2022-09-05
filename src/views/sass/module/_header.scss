@@ -29,19 +29,35 @@ header{
 
 .my-profile {
     position: absolute;
-    top: 50%;
-    right: 1.5%;
+    position: fixed;
+    top: 30px;
+    left: 10px;
     transform: translateY(-25%);
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     overflow: hidden;
     background-color: aquamarine;
     border: 3px solid #1E93FF;
     box-sizing: border-box;
+    &_image{
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+    }
 }
 
 .header-content {
     position: relative;
     height: 65%;
+}
+
+.logout{
+    position: absolute;
+    right: -20px;
+}
+
+.profile{
+    display: none;
 }

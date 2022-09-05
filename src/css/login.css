@@ -4,8 +4,7 @@
   position: relative;
   top: 10%;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
   margin-top: 70px;
 }
 
@@ -17,10 +16,9 @@
 }
 
 .email, .password {
-  border: 1px solid #ababab;
+  border: 1px solid rgb(171, 171, 171);
   display: block;
   width: 100%;
-<<<<<<< HEAD
   border-radius: 10px;
   height: 40px;
   font-size: 20px;
@@ -39,6 +37,3 @@
   border-radius: 10px;
 }
 /*# sourceMappingURL=login.css.map */
-=======
-}/*# sourceMappingURL=login.css.map */
->>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178

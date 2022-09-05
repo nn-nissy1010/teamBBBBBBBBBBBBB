@@ -8,6 +8,11 @@ require(realpath("../../config/dbconnect.php"));
 session_name("user");
 session_start();
 
+unset($_SESSION['name']);
+unset($_SESSION['email']);
+unset($_SESSION['password']);
+unset($_SESSION['img_path']);
+
 if (!empty($_POST)) {
   $login = $db->prepare('SELECT * FROM users WHERE email=? AND password=?');
   $login->execute(array(
@@ -18,8 +23,10 @@ if (!empty($_POST)) {
 
   if ($user) {
     $_SESSION = array();
-    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['name'] = $user['name'];
+    $_SESSION['email'] = $user['email'];
     $_SESSION['password'] = $user['password'];
+    $_SESSION['img_path'] = $user['img_path'];
     $_SESSION['time'] = time();
     header("Location: http://" . $_SERVER['HTTP_HOST'] . "/views/pages/top.php");
     exit();
@@ -31,9 +38,12 @@ if (!empty($_POST)) {
 
 ?>
 <?php include("../components/header.php"); ?>
-<form action="login.php" method="POST">
-  <input type="text" placeholder="mail" name="email">
-  <input type="text" placeholder="password" name="password">
-  <input type="submit" value="ログイン">
-</form>
+<div class="login-wrapper">
+  <form  action="login.php" method="POST">
+    <input class="email" type="text" placeholder="email" name="email">
+    <input class="password" type="text" placeholder="password" name="password">
+    <input class="login" type="submit" value="ログイン">
+  </form>
+  <a href="./createAccount.php" class="create-link">新規作成はこちら</a>
+</div>
 <?php include("../components/footer.php"); ?>

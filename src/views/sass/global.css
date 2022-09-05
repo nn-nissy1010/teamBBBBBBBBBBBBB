@@ -243,11 +243,21 @@ header {
 
 .my-profile {
   position: absolute;
+<<<<<<< HEAD
+  position: fixed;
+  top: 30px;
+  left: 10px;
+  -webkit-transform: translateY(-25%);
+          transform: translateY(-25%);
+  width: 50px;
+  height: 50px;
+=======
   top: 50%;
   right: 1.5%;
   transform: translateY(-25%);
   width: 65px;
   height: 65px;
+>>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178
   border-radius: 50%;
   overflow: hidden;
   background-color: aquamarine;
@@ -255,7 +265,29 @@ header {
   box-sizing: border-box;
 }
 
+.my-profile_image {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .header-content {
   position: relative;
   height: 65%;
+<<<<<<< HEAD
+}
+
+.logout {
+  position: absolute;
+  right: -20px;
+}
+
+.profile {
+  display: none;
+}
+/*# sourceMappingURL=global.css.map */
+=======
 }/*# sourceMappingURL=global.css.map */
+>>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178

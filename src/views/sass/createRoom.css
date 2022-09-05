@@ -38,6 +38,10 @@
   font-family: "Courier New", Courier, monospace;
 }
 
+#roomFileName {
+  color: red;
+}
+
 .form-Btn {
   border-radius: 6px;
   margin-top: 60px;
@@ -61,7 +65,7 @@
 }
 
 .preview-image {
-  width: 90%;
+  margin: 0 30px;
   height: 150px;
   display: none;
 }

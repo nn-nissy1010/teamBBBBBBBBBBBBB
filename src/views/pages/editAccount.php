@@ -52,12 +52,12 @@ $loginUser = userSearch($db, $condition)[0];
     <div class="form-sample">
         <p class="form-label">画像</p>
         <label class="form-input-file" tabindex="0">
-            <input type="file" id="accountFile" name="img" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this);" multiple novalidate>画像を選ぶ→
+            <input type="file" id="editAccountFile" name="img" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this);" multiple novalidate>画像を選ぶ→
         </label>
-        <p id="accountFileName">選択されていません</p>
+        <p id="editAccountFileName">選択されていません</p>
     </div>
     <div id="previewImage" class="preview-image">
-    <img id="preImg" src="<?= $loginUser['img_path'] . '?' . uniqid()?>" alt="">
+    <!-- <img id="preImg" src="<?= $loginUser['img_path'] . '?' . uniqid()?>" alt=""> -->
     <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     </div>
     <div class="form-sample">

@@ -20,6 +20,7 @@ if ($_POST) {
     $name = $_POST["name"];
     $limit = $_POST["limit"];
     uploadRoomImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img_name, $upload_dir);
+    header('Location: top.php' );
 }
 
 ?>
@@ -32,16 +33,16 @@ if ($_POST) {
     <div class="form-sample">
         <p class="form-label">人数制限</p>
         <div class="radio-label">
-            <label>
-                <input type="radio" name="limit" value="2" >
+            <input type="radio" name="limit" value="2" class="required" id="limit2">
+            <label for="limit2">
                 2人
             </label>
-            <label>
-                <input type="radio" name="limit" value="5">
+            <input type="radio" name="limit" value="5" id= "limit5">
+            <label for="limit5">
                 5人
             </label>
-            <label>
-                <input type="radio" name="limit" value="8" class="required">
+            <input type="radio" name="limit" value="8" id ="limit8">
+            <label for="limit8">
                 8人
             </label>
 
@@ -57,7 +58,7 @@ if ($_POST) {
     <div id="previewImage" class="preview-image">
     <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     </div>
-    <input type="submit" class="form-Btn" value="部屋作成">
+    <input type="submit" class="form-Btn" value="部屋作成" >
 </form>
 <script>
 function previewImage(obj)

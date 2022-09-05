@@ -35,6 +35,11 @@
   opacity: 0;
   width: 280px;
   font-family: "Courier New", Courier, monospace;
+
+}
+
+#roomFileName{
+  color: red;;
 }
 
 .form-Btn {
@@ -61,7 +66,7 @@
 }
 
 .preview-image{
-  width: 90%;
+  margin:0 30px; 
   height: 150px;
   display: none;
   img{

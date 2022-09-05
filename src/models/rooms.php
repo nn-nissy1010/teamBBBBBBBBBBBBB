@@ -31,21 +31,21 @@ function uploadRoomImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img
         //ファイルはあるかどうか
         if (is_uploaded_file($tmp_path)) {
             if (move_uploaded_file($tmp_path, $img_path)) {
-                echo $img_name . 'を' . $upload_dir . 'アップしました。';
+                // echo $img_name . 'を' . $upload_dir . 'アップしました。';
                 //DBに保存する(ルーム名、画像ファイル名、画像ファイルパス、ルーム上限人数)
                 $result = roomCreate($db,$name,$img_name,$img_path,$limit);
-                var_dump($result);
+                // var_dump($result);
                 if($result){
-                    echo 'データベースに保存しました！';
+                    // echo 'データベースに保存しました！';
                 }else{
-                    echo 'データベースへの保存が失敗しました！';
+                    // echo 'データベースへの保存が失敗しました！';
                 }
             }else{
-                echo 'ファイルが保存できませんでした。';
+                // echo 'ファイルが保存できませんでした。';
             }
         } else {
-            echo 'ファイルが選択されていません.';
-            echo '<br>';
+            // echo 'ファイルが選択されていません.';
+            // echo '<br>';
         }
     }
 }

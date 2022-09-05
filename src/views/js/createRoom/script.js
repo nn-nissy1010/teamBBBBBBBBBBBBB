@@ -13,7 +13,6 @@ file.addEventListener('change', (event) => {
   const fileNamesList = fileNames.join('\n');
   fileName.textContent = fileNamesList ? fileNamesList : '選択されていません';
 });
-
 //.validationForm を指定した最初の form 要素を取得
 const validationForm = document.querySelector('.validation-form');
 //required クラスを指定された要素の集まり  

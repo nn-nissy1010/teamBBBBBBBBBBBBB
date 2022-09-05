@@ -1,5 +1,5 @@
-const file = document.getElementById('accountFile');
-const fileName = document.getElementById('accountFileName');
+const file = document.getElementById('editAccountFile');
+const fileName = document.getElementById('editAccountFileName');
 file.addEventListener('change', (event) => {
   const files = event.target.files;
   const fileNames = [];

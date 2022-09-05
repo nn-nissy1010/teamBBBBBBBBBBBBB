@@ -31,7 +31,7 @@ if ($_POST) {
     $password = $_POST['password'];
     $img = $_POST['img'];
     if($img_name){
-        editImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $img_name, $upload_dir, $loginUser['img_path'], $condition);
+        editUserImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $img_name, $upload_dir, $loginUser['img_path'], $condition);
     }else{
         userUpdate($db, $name, $email, $tel, $loginUser['img'], $loginUser['img_path'], $condition);
     }

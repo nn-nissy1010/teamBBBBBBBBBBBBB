@@ -115,7 +115,6 @@ section {
     text-align: left;
     padding: 13px;
     border-radius: 12px;
-    width: 80%;
 }
 
 // .sc:before, .sc:after {
@@ -212,5 +211,5 @@ section {
 
 .content{
     height: 520px;
-    overflow: hidden;
+    overflow: scroll;
 }

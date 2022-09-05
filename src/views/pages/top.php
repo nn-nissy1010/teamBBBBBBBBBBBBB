@@ -30,10 +30,10 @@ if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
 <section>
     <div class="room-box">
         <?php foreach ($rooms as $room) : ?>
-            <div class="room">
+            <a href="room.php?id=<?= $room["id"]?>" class="room">
                 <div><?= $room["name"]; ?></div>
                 <img src="<?= $room["img_path"] ?>" alt="">
-            </div>
+            </a>
         <?php endforeach; ?>
     </div>
 </section>

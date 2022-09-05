@@ -125,6 +125,9 @@ section input[type=submit] {
 .right {
   flex-direction: row-reverse;
 }
+.right span {
+  font-size: 25px;
+}
 
 .right .sc:before, .right .sc:after {
   border-left-color: #1e93ff;

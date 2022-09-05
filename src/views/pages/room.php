@@ -127,7 +127,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
 <body>
     <header>
         <div class="room-header">
-            <div class="room-back">←</div>
+            <a href="top.php" class="room-back">←</a>
             <div class="room-name">部屋<?= $_SESSION["roomId"]?></div>
         </div>
     </header>
@@ -154,6 +154,7 @@ if ($_GET['reset'] === "チャット履歴をリセット" && isset($_GET['reset
         <div class="chat-area" id="chat-area">
             <?php echo $result; ?>
         </div>
+        <div class="say right" id="b"><div class="chat-box"><p class="face_icon"><span><?= $object->person?></span></p><div class="chatting"><div class="sc"><p><?=str_replace("\r\n", "<br>", $object->text)?></p></div></div><input type="hidden" name="trash" value="trash"><span>🗑</span></input><input type="hidden" name="edit" value="edit"><span>✎</span></input></div></div>
     </section>
 
     <section>

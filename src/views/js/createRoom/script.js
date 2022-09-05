@@ -62,10 +62,10 @@ validationForm.addEventListener('submit', (e) => {
 }); 
   
 //エラーメッセージを表示する span 要素を生成して親要素に追加する関数
-const createError = (elem, errorMessage) => {
-  const errorSpan = document.createElement('span');
-  errorSpan.classList.add('error');
-  errorSpan.setAttribute('aria-live', 'polite');
-  errorSpan.textContent = errorMessage;
-  elem.parentNode.appendChild(errorSpan);
-}
+// const createError = (elem, errorMessage) => {
+//   const errorSpan = document.createElement('span');
+//   errorSpan.classList.add('error');
+//   errorSpan.setAttribute('aria-live', 'polite');
+//   errorSpan.textContent = errorMessage;
+//   elem.parentNode.appendChild(errorSpan);
+// }

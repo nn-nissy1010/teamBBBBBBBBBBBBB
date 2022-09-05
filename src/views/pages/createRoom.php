@@ -41,7 +41,7 @@ if ($_POST) {
                 5人
             </label>
             <label>
-                <input type="radio" name="limit" value="8"class="required">
+                <input type="radio" name="limit" value="8" class="required">
                 8人
             </label>
 

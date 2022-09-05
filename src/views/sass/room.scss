@@ -150,6 +150,9 @@ section {
 
 .right{
     flex-direction: row-reverse;
+    span{
+        font-size: 25px;
+    }
 }
 
 .right .sc:before, .right .sc:after {
@@ -213,3 +216,7 @@ section {
     height: 520px;
     overflow: scroll;
 }
+
+// .chat-box{
+//     display: flex;
+// }

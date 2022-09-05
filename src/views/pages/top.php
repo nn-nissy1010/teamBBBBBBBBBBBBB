@@ -20,28 +20,31 @@ if (isset($_POST['name']) && strlen($_POST['name']) != 0) {
 }
 ?>
 <?php include("../components/header.php"); ?>
-<section>
-    <form action="top.php" method="post">
-        <input type="text" placeholder="room名" name="name">
-        <input type="submit" value="検索">
-    </form>
-</section>
+<main>
 
-<section>
-    <div class="room-box">
-        <?php foreach ($rooms as $room) : ?>
-            <a href="room.php?id=<?= $room["id"]?>" class="room">
-                <div><?= $room["name"]; ?></div>
-                <img src="<?= $room["img_path"] ?>" alt="">
-            </a>
-        <?php endforeach; ?>
-    </div>
-</section>
-
-<section>
-    <button class="create-room-bottun">部屋を作る→</button>
-</section>
-
-</body>
+    <section>
+        <form action="top.php" method="post">
+            <input type="text" placeholder="room名" name="name">
+            <input type="submit" value="検索">
+        </form>
+    </section>
+    
+    <section>
+        <div class="room-box">
+            <?php foreach ($rooms as $room) : ?>
+                <a href="room.php?id=<?= $room["id"]?>" class="room" style="color:#1e93ff; font-weight:bold;">
+                    <div><?= $room["name"]; ?></div>
+                    <img src="<?= $room["img_path"] ?>" alt="">
+                </a>
+                <?php endforeach; ?>
+            </div>
+        </section>
+        
+        <section>
+            <button class="create-room-bottun"><a href="createRoom.php" style="color:#fff; font-weight:bold;">部屋を作る→</a></button>
+        </section>
+    </main>
+        
+    </body>
 
 </html>

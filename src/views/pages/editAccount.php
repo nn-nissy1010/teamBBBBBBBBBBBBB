@@ -9,7 +9,7 @@ auth('editAccount.php');
 
 session_start();
 
-$loginUserId = $_SESSION['user_id'];
+$loginUserId = $_SESSION["id"];
 $condition = "id = '$loginUserId'";
 $loginUser = userSearch($db, $condition)[0];
 
@@ -38,10 +38,9 @@ if ($_POST) {
 }
 
 $loginUser = userSearch($db, $condition)[0];
-var_dump($loginUser);
 ?>
 <?php include("../components/header.php"); ?>
-<form class="form-wrapper validation-form" action="editAccount.php" method="post" enctype="multipart/form-data">
+<form class="form-wrapper validation-form" action="editAccount.php?id=<?= $loginUserId ?>" method="post" enctype="multipart/form-data">
     <div class="form-sample">
         <p class="form-label">氏名</p>
         <input type="text" class="form-input required" placeholder="例）鈴木一郎" name="name" value="<?= $loginUser['name'] ?>">
@@ -53,12 +52,12 @@ var_dump($loginUser);
     <div class="form-sample">
         <p class="form-label">画像</p>
         <label class="form-input-file" tabindex="0">
-            <input type="file" id="accountFile" name="img" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this);" multiple novalidate>画像を選ぶ→
+            <input type="file" id="editAccountFile" name="img" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this);" multiple novalidate>画像を選ぶ→
         </label>
-        <p id="accountFileName">選択されていません</p>
+        <p id="editAccountFileName">選択されていません</p>
     </div>
     <div id="previewImage" class="preview-image">
-    <img id="preImg" src="<?= $loginUser['img_path'] . '?' . uniqid()?>" alt="">
+    <!-- <img id="preImg" src="<?= $loginUser['img_path'] . '?' . uniqid()?>" alt=""> -->
     <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">
     </div>
     <div class="form-sample">

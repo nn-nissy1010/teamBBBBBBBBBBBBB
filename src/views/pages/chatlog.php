@@ -8,7 +8,7 @@ auth('room.php');
 
 session_start();
 
-$loginUserId = $_SESSION['user_id'];
+$loginUserId = $_SESSION['id'];
 $condition = "id = '$loginUserId'";
 $loginUser = userSearch($db, $condition)[0];
 
@@ -35,9 +35,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === "ON") {
             if ($object->roomId === $_SESSION["roomId"]) {
                 // 第二回目以降
                 if ($object->person === $loginUser['name']) {
-                    $result =  $result . '<div class="say right" id="b"><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result =  $result . '<div class="say right" id="b"><div><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 } else {
-                    $result = $result . '<div class="say left" id="b"><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                    $result = $result . '<div class="say left" id="b"><div><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                 }
             }else {
                 // 第一回目
@@ -45,9 +45,9 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === "ON") {
                 if ($object->roomId === $_SESSION["roomId"]) {
                     // 第二回目以降
                     if ($object->person === $loginUser['name']) {
-                        $result =  $result . '<div class="say right" id="b"><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                        $result =  $result . '<div class="say right" id="b"><div><p class="face_icon"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                     } else {
-                        $result = $result . '<div class="say left" id="b"><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div>';
+                        $result = $result . '<div class="say left" id="b"><div><p class="face_icon"><img src="' . $object->imgPath . '" alt="m" width="110"><span>' . $object->person . '</span></p><div class="chatting"><div class="sc"><p>' . str_replace("\r\n", "<br>", $object->text) . '</p></div></div></div></div>';
                     }
                 }
             }
@@ -62,3 +62,4 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === "ON") {
     echo $filesize;
     exit;
 }
+

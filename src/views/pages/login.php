@@ -10,6 +10,7 @@ session_start();
 
 createToken();
 
+unset($_SESSION['id']);
 unset($_SESSION['name']);
 unset($_SESSION['email']);
 unset($_SESSION['password']);
@@ -26,6 +27,7 @@ if (!empty($_POST)) {
 
   if ($user) {
     $_SESSION = array();
+    $_SESSION['id'] = $user['id'];
     $_SESSION['name'] = $user['name'];
     $_SESSION['email'] = $user['email'];
     $_SESSION['password'] = $user['password'];

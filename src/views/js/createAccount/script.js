@@ -111,17 +111,17 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         }
       });
-       //エラーの最初の要素を取得
-       const errorEleÏm =  validationForm.querySelector('.' + errorClassName);
-       //エラーがあればエラーの最初の要素の位置へスクロール
-       if(errorElem) {
-         const errorElemOffsetTop = errorElem.offsetTop;
-         window.scrollTo({
-           top: errorElemOffsetTop - 40,  //40px 上に位置を調整
-           //スムーススクロール
-           behavior: 'smooth'
-         });
-       }
+  //      //エラーの最初の要素を取得
+  //      const errorElelm =  validationForm.querySelector('.' + errorClassName);
+  //      //エラーがあればエラーの最初の要素の位置へスクロール
+  //      if(errorElem) {
+  //        const errorElemOffsetTop = errorElem.offsetTop;
+  //        window.scrollTo({
+  //          top: errorElemOffsetTop - 40,  //40px 上に位置を調整
+  //          //スムーススクロール
+  //          behavior: 'smooth'
+  //        });
+  //      }
      }); 
    }
  });

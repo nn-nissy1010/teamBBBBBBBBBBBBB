@@ -26,21 +26,21 @@ if ($_POST) {
 }
 ?>
 <?php include("../components/header.php"); ?>
-<form class="form-wrapper validation-form" action="createAccount.php" method="post" enctype="multipart/form-data">
+<form class="form-wrapper validation-form" action="createAccount.php" method="post" enctype="multipart/form-data" novalidate>
     <div class="form-sample">
         <p class="form-label">氏名</p>
         <input type="text" class="form-input required" placeholder="例）鈴木一郎" name="name">
     </div>
     <div class="form-sample">
         <p class="form-label">電話番号</p>
-        <input type="text" class="form-input required tel" placeholder="例）123-4567-8910" name="tel">
+        <input type="text" class="form-input required tel" placeholder="例）08012345678" name="tel">
     </div>
     <div class="form-sample">
         <p class="form-label">画像</p>
         <label class="form-input-file" tabindex="0">
             <input type="file" id="accountFile" name="img" accept="image/jpeg, image/png, image/gif" onchange="previewImage(this);" multiple novalidate>画像を選ぶ→
         </label>
-        <p id="accountFileName">選択されていません</p>
+        <p id="accountFileName" s>選択されていません</p>
     </div>
     <div id="previewImage" class="preview-image">
     <img id="preview" src="data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==">

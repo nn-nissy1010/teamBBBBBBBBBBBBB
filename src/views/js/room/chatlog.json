@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"chatlog":[{"person":"\u00e5\u00a4\u0161\u00e7\u201d\u00b0\u00e4\u00b8\u20ac\u00e7\u00a8\u20ac","imgPath":"img\/test","roomId":"1","time":"01:33","text":"vvvvvvvvvvvvvvv"},{"person":"\u00e5\u00a4\u0161\u00e7\u201d\u00b0\u00e4\u00b8\u20ac\u00e7\u00a8\u20ac","imgPath":"img\/test","roomId":"1","time":"01:34","text":"ad"},{"person":"\u00e5\u00a4\u0161\u00e7\u201d\u00b0\u00e4\u00b8\u20ac\u00e7\u00a8\u20ac","imgPath":"img\/test","roomId":"2","time":"01:35","text":"\u3042\u3042"},{"person":null,"imgPath":null,"roomId":"2","time":"13:19","text":"\u30a2\u30a4\u30a6\u30a8\u30aa"}]}
+=======
+{"chatlog":[{"person":null,"imgPath":null,"roomId":"4","time":"13:47","text":"\u3042\u307b"},{"person":null,"imgPath":null,"roomId":"5","time":"13:47","text":"vvvvvvvvvvvvvvv"},{"person":null,"imgPath":null,"roomId":"9","time":"13:47","text":"\u3053\u3089\u3042\u3042\u3042\u3042"},{"person":null,"imgPath":null,"roomId":"5","time":"15:25","text":"vvvvvvvvvvvvvvv"},{"person":null,"imgPath":null,"roomId":"2","time":"16:47","text":"\u304a\u306e\u304b\u3093gpa0.56"}]}
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651

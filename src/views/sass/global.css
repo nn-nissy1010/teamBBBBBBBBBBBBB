@@ -215,15 +215,18 @@ progress {
   cursor: default;
 }
 
+html {
+  height: 100%;
+}
+
 header {
-  height: 75px;
+  margin-bottom: 30px;
 }
 
 .body-wrapper {
   width: 100%;
   height: auto;
   padding: 30px;
-  overflow: hidden;
 }
 
 .label-title {
@@ -234,20 +237,23 @@ header {
 }
 
 .header-sentence {
+<<<<<<< HEAD
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+=======
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651
   text-align: center;
   font-size: 36px;
   font-family: fantasy;
-  margin-bottom: 30px;
   color: #1E93FF;
 }
 
 .my-profile {
   position: absolute;
+<<<<<<< HEAD
   position: fixed;
   top: 30px;
   left: 10px;
@@ -261,11 +267,14 @@ header {
   border: 3px solid #1E93FF;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+=======
+  top: 10px;
+  filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.6));
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651
 }
-
 .my-profile_image {
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -278,10 +287,99 @@ header {
 
 .logout {
   position: absolute;
-  right: -20px;
+  top: 30px;
+  font-weight: bold;
+  color: #7e7e7e;
+  font-size: 20px;
+  right: 0;
 }
 
 .profile {
+  position: absolute;
+  top: 10px;
   display: none;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  background-color: #f6f6f6;
+  filter: drop-shadow(10px 10px 10px rgba(0, 0, 0, 0.6));
+  border-radius: 5%;
+  padding: 20px;
 }
+
+.profile-title {
+  text-align: center;
+  font-weight: bold;
+  color: #1E93FF;
+  font-size: 24px;
+}
+
+.profile-wrapper {
+  margin: 10px;
+}
+
+.profile-detail-title {
+  font-size: 24px;
+  font-weight: bolder;
+  color: #275681;
+}
+
+.profile-detail {
+  font-size: 20px;
+  text-align: left;
+  margin-bottom: 10px;
+}
+
+.profile_img {
+  width: 100%;
+}
+<<<<<<< HEAD
 /*# sourceMappingURL=global.css.map */
+=======
+
+.modal-img-box {
+  width: 100%;
+}
+
+.profile-edit-button {
+  width: 50%;
+  height: 50px;
+  border-radius: 5px;
+  margin-top: 20px;
+  background-color: #1e93ff;
+  color: white;
+  align-items: center;
+}
+
+.p-button {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.round_btn {
+  display: block;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%; /* 丸みの度合い */
+  background: gray; /* ボタンの背景色 */
+}
+
+.round_btn::before, .round_btn::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 3px;
+  height: 21px;
+  background: #fff; /* バツ印の色 */
+}
+
+.round_btn::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.round_btn::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}/*# sourceMappingURL=global.css.map */
+>>>>>>> 2920b265f00a614be119e8eb9305b4f585fa6651

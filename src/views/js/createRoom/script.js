@@ -13,7 +13,6 @@ file.addEventListener('change', (event) => {
   const fileNamesList = fileNames.join('\n');
   fileName.textContent = fileNamesList ? fileNamesList : '選択されていません';
 });
-
 //.validationForm を指定した最初の form 要素を取得
 const validationForm = document.querySelector('.validation-form');
 //required クラスを指定された要素の集まり  
@@ -62,10 +61,10 @@ validationForm.addEventListener('submit', (e) => {
 }); 
   
 //エラーメッセージを表示する span 要素を生成して親要素に追加する関数
-const createError = (elem, errorMessage) => {
-  const errorSpan = document.createElement('span');
-  errorSpan.classList.add('error');
-  errorSpan.setAttribute('aria-live', 'polite');
-  errorSpan.textContent = errorMessage;
-  elem.parentNode.appendChild(errorSpan);
-}
+// const createError = (elem, errorMessage) => {
+//   const errorSpan = document.createElement('span');
+//   errorSpan.classList.add('error');
+//   errorSpan.setAttribute('aria-live', 'polite');
+//   errorSpan.textContent = errorMessage;
+//   elem.parentNode.appendChild(errorSpan);
+// }

@@ -19,7 +19,7 @@ if ($_POST) {
     //その他の取得
     $name = $_POST["name"];
     $limit = $_POST["limit"];
-    uploadImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img_name, $upload_dir);
+    uploadRoomImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img_name, $upload_dir);
 }
 
 ?>

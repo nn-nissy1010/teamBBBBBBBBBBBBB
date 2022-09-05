@@ -8,7 +8,7 @@ auth('room.php');
 
 session_start();
 
-$loginUserId = $_SESSION['user_id'];
+$loginUserId = $_SESSION['id'];
 $condition = "id = '$loginUserId'";
 $loginUser = userSearch($db, $condition)[0];
 
@@ -62,3 +62,4 @@ if (isset($_GET['ajax']) && $_GET['ajax'] === "ON") {
     echo $filesize;
     exit;
 }
+

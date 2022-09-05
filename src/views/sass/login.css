@@ -20,6 +20,7 @@
   border: 1px solid #ababab;
   display: block;
   width: 100%;
+<<<<<<< HEAD
   border-radius: 10px;
   height: 40px;
   font-size: 20px;
@@ -38,3 +39,6 @@
   border-radius: 10px;
 }
 /*# sourceMappingURL=login.css.map */
+=======
+}/*# sourceMappingURL=login.css.map */
+>>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178

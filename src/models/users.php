@@ -26,7 +26,7 @@ VALUES
     $stmt->execute();
 }
 
-function uploadImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name){
+function uploadUserImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $password, $img_name, $upload_dir){
     if (count($err_msgs) === 0) {
         //ファイルはあるかどうか
         if (is_uploaded_file($tmp_path)) {
@@ -56,7 +56,7 @@ function userUpdate($db, $name, $email, $tel, $img, $img_path, $condition)
     $stmt->execute();
 }
 
-function editImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $img_name, $upload_dir, $pre_img_path, $condition){
+function editUserImg($db, $err_msgs, $tmp_path, $img_path, $name, $email,  $tel, $img_name, $upload_dir, $pre_img_path, $condition){
     if (count($err_msgs) === 0) {
         //ファイルはあるかどうか
         if (is_uploaded_file($tmp_path)) {
@@ -108,6 +108,15 @@ function userSearch($db, $condition)
 
 //検索（ログイン用）
 function loginSearch($db, $condition)
+{
+    $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
+    $stmt->execute();
+    $output = $stmt->fetchAll();
+    return $output;
+}
+
+//検索（ログイン用）
+function middle($db, $condition)
 {
     $stmt = $db->prepare("SELECT * from `users` WHERE $condition");
     $stmt->execute();

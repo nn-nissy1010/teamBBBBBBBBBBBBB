@@ -114,7 +114,6 @@ section input[type=submit] {
   text-align: left;
   padding: 13px;
   border-radius: 12px;
-  width: 80%;
 }
 
 .sc:after {
@@ -196,5 +195,5 @@ section input[type=submit] {
 
 .content {
   height: 520px;
-  overflow: hidden;
+  overflow: scroll;
 }/*# sourceMappingURL=room.css.map */

@@ -26,7 +26,7 @@ function roomCreate($db,$name,$img,$img_path,$limit){
     }
 }
 
-function uploadImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img_name, $upload_dir){
+function uploadRoomImg($db, $err_msgs, $tmp_path, $img_path, $name, $limit, $img_name, $upload_dir){
     if (count($err_msgs) === 0) {
         //ファイルはあるかどうか
         if (is_uploaded_file($tmp_path)) {

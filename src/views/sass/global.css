@@ -5,8 +5,7 @@
  * github.com/filipelinhares/ress
  */
 html {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-text-size-adjust: 100%;
   word-break: normal;
   -moz-tab-size: 4;
@@ -16,8 +15,7 @@ html {
 
 *, :after, :before {
   background-repeat: no-repeat;
-  -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
 }
 
 :after, :before {
@@ -67,7 +65,7 @@ a:active, a:hover {
 }
 
 code, kbd, pre, samp {
-  font-family: monospace,monospace;
+  font-family: monospace, monospace;
 }
 
 pre {
@@ -86,11 +84,11 @@ sub, sup {
 }
 
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
 input {
@@ -202,7 +200,6 @@ progress {
     clip: rect(0 0 0 0) !important;
   }
 }
-
 [aria-busy=true] {
   cursor: progress;
 }
@@ -216,7 +213,7 @@ progress {
 }
 
 header {
-  height: 150px;
+  height: 75px;
 }
 
 .body-wrapper {
@@ -229,15 +226,14 @@ header {
 .label-title {
   text-align: center;
   font-size: 24px;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
 }
 
 .header-sentence {
   position: absolute;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   text-align: center;
   font-size: 36px;
   font-family: fantasy;
@@ -247,6 +243,7 @@ header {
 
 .my-profile {
   position: absolute;
+<<<<<<< HEAD
   position: fixed;
   top: 30px;
   left: 10px;
@@ -254,12 +251,18 @@ header {
           transform: translateY(-25%);
   width: 50px;
   height: 50px;
+=======
+  top: 50%;
+  right: 1.5%;
+  transform: translateY(-25%);
+  width: 65px;
+  height: 65px;
+>>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178
   border-radius: 50%;
   overflow: hidden;
   background-color: aquamarine;
   border: 3px solid #1E93FF;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .my-profile_image {
@@ -273,6 +276,7 @@ header {
 .header-content {
   position: relative;
   height: 65%;
+<<<<<<< HEAD
 }
 
 .logout {
@@ -284,3 +288,6 @@ header {
   display: none;
 }
 /*# sourceMappingURL=global.css.map */
+=======
+}/*# sourceMappingURL=global.css.map */
+>>>>>>> b7f44d46f3037ac030676c30f7eb007d655be178
